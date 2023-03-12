@@ -34,15 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(right: 24),
                 child: CircleAvatar(
                   child: ClipOval(
-                    child: Image.network(
-                      'https://avatars.githubusercontent.com/alamin-karno',
-                    ),
+                    child: Image.network(ImageUtils.icProfile),
                   ),
                 ),
               ),
             ],
             shadowColor: Colors.transparent,
-            expandedHeight: 426,
+            expandedHeight: 316,
             backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
@@ -57,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 24,
-                        vertical: 64,
+                        vertical: 40,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -128,6 +126,131 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+          const SliverPadding(
+            padding: EdgeInsets.only(top: 32),
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'My Parcels',
+                        style: Theme.of(context).textTheme.headline3,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (_, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 16,
+                  ),
+                  child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    height: 174,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: Theme.of(context).backgroundColor,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Theme.of(context).shadowColor,
+                          blurRadius: 10,
+                          spreadRadius: 0,
+                          offset: const Offset(0, 0),
+                        )
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '00359007738060313786',
+                              style: Theme.of(context).textTheme.headline5,
+                            ),
+                            Container(
+                              height: 31,
+                              width: 78,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(ImageUtils.icAmazon),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'In transit',
+                              style: Theme.of(context).textTheme.headline3,
+                            ),
+                            const SizedBox(height: 3),
+                            Text(
+                              'Last update: 3 hours ago',
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              height: 5,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(2.5),
+                              ),
+                              child: LinearProgressIndicator(
+                                value: 0.7,
+                                color: Theme.of(context)
+                                    .appBarTheme
+                                    .backgroundColor,
+                                backgroundColor: const Color(0xFFF8F8F8),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 60,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Details',
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
+                                  SvgPicture.asset(ImageUtils.icDetails),
+                                ],
+                              ),
+                              Container(
+                                height: 1,
+                                color: Colors.black,
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
       bottomNavigationBar: const CustomNavigationBar(),
