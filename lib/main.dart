@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_parcel_app/ui/views/views.dart';
 import 'package:flutter_parcel_app/utils/utils.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Parcel App',
       debugShowCheckedModeBanner: false,
       theme: CustomTheme.getCustomTheme(),
-      home: const Scaffold(),
+      home: const HomeScreen(),
     );
   }
 }
