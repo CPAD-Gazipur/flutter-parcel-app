@@ -24,6 +24,18 @@ class CustomTheme {
           backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
         ),
       ),
+      inputDecorationTheme: const InputDecorationTheme(
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFFC4C4C4),
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0x50333333),
+          ),
+        ),
+      ),
       unselectedWidgetColor: const Color(0x50333333),
       shadowColor: const Color(0xFFe6e6e6).withOpacity(0.5),
       backgroundColor: Colors.white,
