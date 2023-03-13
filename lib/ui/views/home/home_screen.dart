@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_parcel_app/ui/views/my_parcel/my_parcel_screen.dart';
-import 'package:flutter_parcel_app/ui/views/send_parcel/send_parcel_screen.dart';
+import 'package:flutter_parcel_app/ui/views/views.dart';
 import 'package:flutter_parcel_app/ui/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
