@@ -32,20 +32,20 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
       items: [
         BottomNavigationBarItem(
           icon: _currentIndex == 0
-              ? SvgPicture.asset(ImageUtils.icMyParcel)
-              : SvgPicture.asset(ImageUtils.icMyParcelGrey),
+              ? SvgPicture.asset(ImageUtils.icMyParcelSVG)
+              : SvgPicture.asset(ImageUtils.icMyParcelGreySVG),
           label: 'My Parcel',
         ),
         BottomNavigationBarItem(
           icon: _currentIndex == 1
-              ? SvgPicture.asset(ImageUtils.icSendParcel)
-              : SvgPicture.asset(ImageUtils.icsSendParcelGrey),
+              ? SvgPicture.asset(ImageUtils.icSendParcelSVG)
+              : SvgPicture.asset(ImageUtils.icsSendParcelGreySVG),
           label: 'Send Parcel',
         ),
         BottomNavigationBarItem(
           icon: _currentIndex == 2
-              ? SvgPicture.asset(ImageUtils.icParcelCenter)
-              : SvgPicture.asset(ImageUtils.icParcelCenterGrey),
+              ? SvgPicture.asset(ImageUtils.icParcelCenterSVG)
+              : SvgPicture.asset(ImageUtils.icParcelCenterGreySVG),
           label: 'Parcel Center',
         ),
       ],

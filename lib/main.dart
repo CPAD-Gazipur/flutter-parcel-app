@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    CustomTheme.init(context: context);
+    ParcelAppTheme.init(context: context);
     return MaterialApp(
       title: 'Parcel App',
       debugShowCheckedModeBanner: false,
-      theme: CustomTheme.getCustomTheme(),
+      theme: ParcelAppTheme.getLightTheme,
       home: const HomeScreen(),
     );
   }

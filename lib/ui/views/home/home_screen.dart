@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                   padding: const EdgeInsets.all(12),
                                   child: SvgPicture.asset(
-                                    ImageUtils.icQRCode,
+                                    ImageUtils.icQRCodeSVG,
                                   ),
                                 )
                               ],
@@ -234,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     style:
                                         Theme.of(context).textTheme.headline4,
                                   ),
-                                  SvgPicture.asset(ImageUtils.icDetails),
+                                  SvgPicture.asset(ImageUtils.icDetailsSVG),
                                 ],
                               ),
                               Container(

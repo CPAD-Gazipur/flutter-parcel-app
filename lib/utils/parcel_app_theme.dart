@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomTheme {
+class ParcelAppTheme {
   static BuildContext? _context;
 
   static void init({required BuildContext context}) {
     _context = context;
   }
 
-  static ThemeData getCustomTheme() {
+  static ThemeData get getLightTheme {
     return ThemeData(
       primarySwatch: Colors.pink,
       appBarTheme: const AppBarTheme(
