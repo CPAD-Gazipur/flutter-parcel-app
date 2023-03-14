@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_parcel_app/services/services.dart';
 import 'package:flutter_parcel_app/ui/views/views.dart';
 import 'package:flutter_parcel_app/ui/widgets/widgets.dart';
 
@@ -33,6 +34,15 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: CustomNavigationBar(
         currentIndex: _currentIndex,
         onItemTapped: _onItemTapped,
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+        onPressed: () {
+          NativeCommunication.openActivity();
+        },
+        child: Icon(
+          Icons.chat_bubble,
+        ),
       ),
     );
   }

@@ -45,6 +45,12 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera is need for upload photo in crisp chat</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Photo Library is need for crisp chat</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone is need for crisp chat</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 </dict>
