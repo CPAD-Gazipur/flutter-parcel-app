@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_parcel_app/ui/views/crsip_chat_screen.dart';
 import 'package:flutter_parcel_app/utils/utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -105,13 +104,7 @@ class MyParcelScreen extends StatelessWidget {
                           width: double.infinity,
                           child: TextButton(
                             style: Theme.of(context).textButtonTheme.style,
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const CrispChatScreen(),
-                                ),
-                              );
-                            },
+                            onPressed: () {},
                             child: Text(
                               'Track Parcel',
                               style: Theme.of(context).textTheme.bodyText1,

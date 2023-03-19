@@ -15,7 +15,7 @@ class SendParcelScreen extends StatelessWidget {
             Text(
               'Send parcel',
               style: Theme.of(context).textTheme.headline1,
-            )
+            ),
           ],
         ),
       ),

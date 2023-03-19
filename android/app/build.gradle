@@ -70,6 +70,6 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'im.crisp:crisp-sdk:1.0.13'
+    implementation 'im.crisp:crisp-sdk:1.0.14'
     implementation 'androidx.multidex:multidex:2.0.1'
 }
