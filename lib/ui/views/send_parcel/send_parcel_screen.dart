@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_parcel_app/data/data.dart';
 import 'package:flutter_parcel_app/models/models.dart';
+import 'package:flutter_parcel_app/ui/views/details/parcel_details_screen.dart';
 import 'package:flutter_parcel_app/ui/widgets/parcel_widget.dart';
 
 class SendParcelScreen extends StatelessWidget {
@@ -36,6 +37,16 @@ class SendParcelScreen extends StatelessWidget {
                   image: parcel.image,
                   dimension: parcel.dimension,
                   description: parcel.description,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ParcelDetailsScreen(
+                          parcel: parcel,
+                        ),
+                      ),
+                    );
+                  },
                 );
               },
             )
