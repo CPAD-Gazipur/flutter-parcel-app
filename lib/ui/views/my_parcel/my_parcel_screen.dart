@@ -79,6 +79,7 @@ class MyParcelScreen extends StatelessWidget {
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: 'tracking number',
+                                      focusedBorder: InputBorder.none,
                                     ),
                                   ),
                                 ),
