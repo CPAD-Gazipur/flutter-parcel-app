@@ -35,13 +35,17 @@ class _HomeScreenState extends State<HomeScreen> {
         currentIndex: _currentIndex,
         onItemTapped: _onItemTapped,
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-        onPressed: () {
-          NativeCommunication.openActivity();
-        },
-        child: Icon(
-          Icons.chat_bubble,
+      floatingActionButton: SizedBox(
+        height: 48,
+        child: FloatingActionButton(
+          backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+          onPressed: () {
+            NativeCommunication.openActivity();
+          },
+          child: const Icon(
+            Icons.chat_bubble,
+            size: 20,
+          ),
         ),
       ),
     );
