@@ -40,37 +40,41 @@ class ParcelDeliveryMethod extends StatelessWidget {
         onExpansionChanged: onExpansionChanged,
         tilePadding: EdgeInsets.zero,
         trailing: const SizedBox.shrink(),
-        title: Container(
-          height: 102,
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 70,
-                width: 70,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(image),
+        title: Hero(
+          tag: image,
+          transitionOnUserGestures: true,
+          child: Container(
+            height: 102,
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(image),
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 24),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    deliveryMethod,
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                  Text(
-                    duration,
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
-                ],
-              )
-            ],
+                const SizedBox(width: 24),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      deliveryMethod,
+                      style: Theme.of(context).textTheme.headline4,
+                    ),
+                    Text(
+                      duration,
+                      style: Theme.of(context).textTheme.headline5,
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
         expandedCrossAxisAlignment: CrossAxisAlignment.start,

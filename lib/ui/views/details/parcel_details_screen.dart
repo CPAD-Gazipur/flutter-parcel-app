@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_parcel_app/data/data.dart';
 import 'package:flutter_parcel_app/models/models.dart';
+import 'package:flutter_parcel_app/ui/views/views.dart';
 import 'package:flutter_parcel_app/ui/widgets/widgets.dart';
 
 class ParcelDetailsScreen extends StatelessWidget {
@@ -68,7 +69,16 @@ class ParcelDetailsScreen extends StatelessWidget {
                 width: double.infinity,
                 child: TextButton(
                   style: Theme.of(context).textButtonTheme.style,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => ParcelCheckboxScreen(
+                          parcel: parcel,
+                          deliveryMethod: DeliveryData.deliveryMethods[0],
+                        ),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Checkout',
                     style: Theme.of(context).textTheme.bodyText1,
