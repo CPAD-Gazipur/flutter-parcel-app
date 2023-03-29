@@ -24,7 +24,7 @@ import Crisp
   }
 
   private func openActivity() {
-          CrispSDK.configure(websiteID: "a4685f43-8022-4142-b9cb-b786c6628a92")
+          CrispSDK.configure(websiteID: "b3f3d31f-f27c-4f54-a9b2-b9db89a86316")
           self.window?.rootViewController?.present(ChatViewController(), animated: true)
       }
 
