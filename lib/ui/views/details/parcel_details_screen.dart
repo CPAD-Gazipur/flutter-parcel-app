@@ -53,7 +53,7 @@ class ParcelDetailsScreen extends StatelessWidget {
                   DeliveryMethod deliverMethod =
                       DeliveryData.deliveryMethods[index];
                   return ParcelDeliveryMethod(
-                    initiallyExpanded: index == 0 ? true : false,
+                    initiallyExpanded: false,
                     onExpansionChanged: (value) {
                       debugPrint('-----$index: $value');
                     },

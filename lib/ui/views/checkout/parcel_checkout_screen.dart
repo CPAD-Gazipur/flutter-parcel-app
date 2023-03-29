@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_parcel_app/models/models.dart';
 import 'package:flutter_parcel_app/ui/widgets/widgets.dart';
+import 'package:flutter_parcel_app/utils/image_utils.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ParcelCheckboxScreen extends StatelessWidget {
   final Parcel parcel;
@@ -134,6 +136,169 @@ class ParcelCheckboxScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 5),
+              Text(
+                'Checkout details',
+                style: Theme.of(context).textTheme.headline3,
+              ),
+              const SizedBox(height: 11),
+              Container(
+                height: 207,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 19,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(7),
+                  image: const DecorationImage(
+                    image: AssetImage(ImageUtils.icsCardBackground),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      '•••• •••• •••• 0142',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline2!
+                          .copyWith(color: Colors.white),
+                    ),
+                    const SizedBox(height: 60),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'MD. AL-AMIN',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(color: Colors.white),
+                        ),
+                        Text(
+                          '10/26',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 21),
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(6),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Theme.of(context).shadowColor,
+                      spreadRadius: 0,
+                      blurRadius: 10,
+                      offset: const Offset(0, 0),
+                    )
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Summary',
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        SizedBox(
+                          width: 45,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Edit',
+                                    style:
+                                        Theme.of(context).textTheme.bodyText2,
+                                  ),
+                                  SvgPicture.asset(
+                                    ImageUtils.icDetailsSVG,
+                                  ),
+                                ],
+                              ),
+                              Container(
+                                height: 1,
+                                color: Colors.black,
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Recipient',
+                          style: Theme.of(context).textTheme.headline4,
+                        ),
+                        Text(
+                          'Md. Al-Amin\namin15-1951@diu.edu.bd\n+8801621893919\nNorth Khailkur, Board Bazar, National Univeristy - 1704, Gazipur, Bangladesh',
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Parcel size',
+                          style: Theme.of(context).textTheme.headline4,
+                        ),
+                        Text(
+                          parcel.size,
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Delivery method',
+                          style: Theme.of(context).textTheme.headline4,
+                        ),
+                        Text(
+                          deliveryMethod.deliveryMethod,
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      height: 48,
+                      width: double.infinity,
+                      child: TextButton(
+                        style: Theme.of(context).textButtonTheme.style,
+                        onPressed: () {},
+                        child: Text(
+                          'Pay \$45.0',
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 11),
             ],
           ),
         ),

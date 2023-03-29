@@ -45,6 +45,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
           transitionOnUserGestures: true,
           child: Container(
             height: 102,
+            color: Theme.of(context).backgroundColor,
             padding: const EdgeInsets.all(16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
