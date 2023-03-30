@@ -22,9 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> screens = const [
     MyParcelScreen(),
     SendParcelScreen(),
-    Center(
-      child: Text('Parcel Center'),
-    ),
+    ParcelCenterScreen(),
   ];
 
   @override

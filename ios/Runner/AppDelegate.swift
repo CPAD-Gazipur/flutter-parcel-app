@@ -1,6 +1,7 @@
 import UIKit
 import Flutter
 import Crisp
+import GoogleMaps
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -20,6 +21,9 @@ import Crisp
               }
      })
     GeneratedPluginRegistrant.register(with: self)
+
+    GMSServices.provideAPIKey("AIzaSyDJQtaIqNR0VhfB5mgjKqzXthSYu1NfvX4")
+
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 

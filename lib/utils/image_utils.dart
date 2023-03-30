@@ -21,6 +21,7 @@ class ImageUtils {
   static const String icParcelSizeLarge = '${_base}img_parcel_size_large.png';
   static const String icParcelSizeMedium = '${_base}img_parcel_size_medium.png';
   static const String icParcelSizeSmall = '${_base}img_parcel_size_small.png';
+  static const String icMarker = '${_base}icon_marker.png';
 
   /// NETWORK IMAGES
   static const String icProfile =

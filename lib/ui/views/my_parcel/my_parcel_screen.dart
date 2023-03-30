@@ -76,6 +76,7 @@ class MyParcelScreen extends StatelessWidget {
                                     horizontal: 16,
                                   ),
                                   child: const TextField(
+                                    keyboardType: TextInputType.number,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: 'tracking number',
