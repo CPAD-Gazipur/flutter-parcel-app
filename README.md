@@ -37,16 +37,19 @@ This course is designed for beginner to intermediate developers who want to buil
 
 - Code using Flutter with ❤️ by [Md. Al-Amin](https://github.com/alamin-karno)
 
+## Animation (GIF):
+|                     Parcel Tracker App (GIF)                     |
+|:----------------------------------------------------------------:|
+| <img src="screenshots/parcel_tracker_animation.gif" width="250"> |
+
 ## Screenshots:
 
 |                               Home Screen                                |                              Home Screen Extended                               |                             Send Parcel                              |
 |:------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 |      <img src="screenshots/parcel_tracker_home_ui.png" width="250">      |      <img src="screenshots/parcel_tracker_home_extended.png" width="250">       |  <img src="screenshots/parcel_tracker_send_parcel.png" width="250">  |
 |                             Delivery Method                              |                            Delivery Method Extended                             |                               Checkout                               |
-|     :--------------------------------------------------------------:     |     :--------------------------------------------------------------------:      | :------------------------------------------------------------------: |
 |  <img src="screenshots/parcel_tracker_delivery_method.png" width="250">  | <img src="screenshots/parcel_tracker_delivery_method_extended.png" width="250"> |   <img src="screenshots/parcel_tracker_checkout.png" width="250">    |
 |                            Checkout Extended                             |                                  Parcel Center                                  |                               Chatting                               |
-|     :--------------------------------------------------------------:     |     :--------------------------------------------------------------------:      | :------------------------------------------------------------------: |
 | <img src="screenshots/parcel_tracker_checkout_extended.png" width="250"> |          <img src="screenshots/parcel_tracker_center.png" width="250">          |    <img src="screenshots/parcel_tracker_chating.png" width="250">    |
 
 
