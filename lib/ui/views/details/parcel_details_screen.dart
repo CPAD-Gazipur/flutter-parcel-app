@@ -32,7 +32,7 @@ class ParcelDetailsScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline3,
               ),
               const SizedBox(height: 11),
-              ParcelWidget(
+              ParcelSizeWidget(
                 isDone: true,
                 size: parcel.size,
                 image: parcel.image,

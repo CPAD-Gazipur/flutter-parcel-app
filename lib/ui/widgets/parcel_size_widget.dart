@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ParcelWidget extends StatelessWidget {
+class ParcelSizeWidget extends StatelessWidget {
   final bool isDone;
   final String size, dimension, description, image;
   final Function()? onTap;
 
-  const ParcelWidget({
+  const ParcelSizeWidget({
     Key? key,
     required this.size,
     required this.description,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_parcel_app/data/data.dart';
 import 'package:flutter_parcel_app/models/models.dart';
 import 'package:flutter_parcel_app/ui/views/details/parcel_details_screen.dart';
-import 'package:flutter_parcel_app/ui/widgets/parcel_widget.dart';
+import 'package:flutter_parcel_app/ui/widgets/parcel_size_widget.dart';
 
 class SendParcelScreen extends StatelessWidget {
   const SendParcelScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class SendParcelScreen extends StatelessWidget {
               itemCount: ParcelData.parcelList.length,
               itemBuilder: (context, index) {
                 Parcel parcel = ParcelData.parcelList[index];
-                return ParcelWidget(
+                return ParcelSizeWidget(
                   size: parcel.size,
                   image: parcel.image,
                   dimension: parcel.dimension,
