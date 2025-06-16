@@ -3,14 +3,14 @@ import 'package:flutter_parcel_app/utils/image_utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomNavigationBar extends StatelessWidget {
-  final int currentIndex;
-  final Function(int) onItemTapped;
-
   const CustomNavigationBar({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.onItemTapped,
-  }) : super(key: key);
+  });
+
+  final int currentIndex;
+  final Function(int) onItemTapped;
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,8 @@ class CustomNavigationBar extends StatelessWidget {
       unselectedFontSize: 12,
       selectedItemColor: Colors.black,
       unselectedItemColor: Theme.of(context).unselectedWidgetColor,
-      selectedLabelStyle: Theme.of(context).textTheme.headline5,
-      unselectedLabelStyle: Theme.of(context).textTheme.headline5,
+      selectedLabelStyle: Theme.of(context).textTheme.headlineSmall,
+      unselectedLabelStyle: Theme.of(context).textTheme.headlineSmall,
       items: [
         BottomNavigationBarItem(
           icon: currentIndex == 0

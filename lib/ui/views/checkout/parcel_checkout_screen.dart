@@ -5,13 +5,14 @@ import 'package:flutter_parcel_app/utils/image_utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ParcelCheckboxScreen extends StatelessWidget {
-  final Parcel parcel;
-  final DeliveryMethod deliveryMethod;
   const ParcelCheckboxScreen({
-    Key? key,
+    super.key,
     required this.parcel,
     required this.deliveryMethod,
-  }) : super(key: key);
+  });
+
+  final Parcel parcel;
+  final DeliveryMethod deliveryMethod;
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +26,12 @@ class ParcelCheckboxScreen extends StatelessWidget {
             children: [
               Text(
                 'Checkout',
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               const SizedBox(height: 17),
               Text(
                 'Parcel size',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 11),
               ParcelSizeWidget(
@@ -43,7 +44,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 'Delivery method',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 11),
               Stack(
@@ -56,7 +57,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4),
-                      color: Theme.of(context).backgroundColor,
+                      color: Theme.of(context).colorScheme.surface,
                       boxShadow: [
                         BoxShadow(
                           color: Theme.of(context).shadowColor,
@@ -91,11 +92,14 @@ class ParcelCheckboxScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   deliveryMethod.deliveryMethod,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium,
                                 ),
                                 Text(
                                   deliveryMethod.duration,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ],
                             )
@@ -139,7 +143,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 'Checkout details',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 11),
               Container(
@@ -163,7 +167,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
                       '•••• •••• •••• 0142',
                       style: Theme.of(context)
                           .textTheme
-                          .headline2!
+                          .displayMedium!
                           .copyWith(color: Colors.white),
                     ),
                     const SizedBox(height: 60),
@@ -174,14 +178,14 @@ class ParcelCheckboxScreen extends StatelessWidget {
                           'MD. AL-AMIN',
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
+                              .headlineMedium!
                               .copyWith(color: Colors.white),
                         ),
                         Text(
                           '10/26',
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
+                              .headlineMedium!
                               .copyWith(color: Colors.white),
                         ),
                       ],
@@ -212,7 +216,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Summary',
-                          style: Theme.of(context).textTheme.headline3,
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                         SizedBox(
                           width: 45,
@@ -224,7 +228,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
                                   Text(
                                     'Edit',
                                     style:
-                                        Theme.of(context).textTheme.bodyText2,
+                                        Theme.of(context).textTheme.bodyMedium,
                                   ),
                                   SvgPicture.asset(
                                     ImageUtils.icDetailsSVG,
@@ -246,11 +250,11 @@ class ParcelCheckboxScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Recipient',
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
-                          'Md. Al-Amin\namin15-1951@diu.edu.bd\n+8801621893919\nNorth Khailkur, Board Bazar, National Univeristy - 1704, Gazipur, Bangladesh',
-                          style: Theme.of(context).textTheme.headline5,
+                          'Md. Al-Amin\nalamin.karno@gmail.com\n+8801621893919\nNorth Khailkur, Board Bazar, National Univeristy - 1704, Gazipur, Bangladesh',
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                       ],
                     ),
@@ -260,11 +264,11 @@ class ParcelCheckboxScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Parcel size',
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
                           parcel.size,
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                       ],
                     ),
@@ -274,11 +278,11 @@ class ParcelCheckboxScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Delivery method',
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
                           deliveryMethod.deliveryMethod,
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                       ],
                     ),
@@ -291,7 +295,7 @@ class ParcelCheckboxScreen extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           'Pay \$45.0',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
                     ),

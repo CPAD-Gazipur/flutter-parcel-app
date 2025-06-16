@@ -4,7 +4,7 @@ import 'package:flutter_parcel_app/utils/utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MyParcelScreen extends StatelessWidget {
-  const MyParcelScreen({Key? key}) : super(key: key);
+  const MyParcelScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class MyParcelScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 24),
             child: Text(
               'Track Parcel',
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
           centerTitle: false,
@@ -57,7 +57,7 @@ class MyParcelScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Enter parcel number or scan QR code',
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
@@ -71,7 +71,8 @@ class MyParcelScreen extends StatelessWidget {
                                   height: 49,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(4),
-                                    color: Theme.of(context).backgroundColor,
+                                    color:
+                                        Theme.of(context).colorScheme.surface,
                                   ),
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 16,
@@ -80,7 +81,7 @@ class MyParcelScreen extends StatelessWidget {
                                     keyboardType: TextInputType.number,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      hintText: 'tracking number',
+                                      hintText: 'Tracking number',
                                       focusedBorder: InputBorder.none,
                                     ),
                                   ),
@@ -92,7 +93,7 @@ class MyParcelScreen extends StatelessWidget {
                                 width: 50,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(4),
-                                  color: Theme.of(context).backgroundColor,
+                                  color: Theme.of(context).colorScheme.surface,
                                 ),
                                 padding: const EdgeInsets.all(12),
                                 child: SvgPicture.asset(
@@ -110,7 +111,7 @@ class MyParcelScreen extends StatelessWidget {
                             onPressed: () {},
                             child: Text(
                               'Track Parcel',
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                           ),
                         ),
@@ -135,7 +136,7 @@ class MyParcelScreen extends StatelessWidget {
                   children: [
                     Text(
                       'My Parcels',
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.displaySmall,
                     ),
                   ],
                 ),

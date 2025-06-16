@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class ParcelSizeWidget extends StatelessWidget {
-  final bool isDone;
-  final String size, dimension, description, image;
-  final Function()? onTap;
-
   const ParcelSizeWidget({
-    Key? key,
+    super.key,
     required this.size,
     required this.description,
     required this.dimension,
     required this.image,
     this.isDone = false,
     this.onTap,
-  }) : super(key: key);
+  });
+
+  final bool isDone;
+  final String size, dimension, description, image;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class ParcelSizeWidget extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: Theme.of(context).backgroundColor,
+                color: Theme.of(context).colorScheme.surface,
                 boxShadow: [
                   BoxShadow(
                     color: Theme.of(context).shadowColor,
@@ -65,17 +65,17 @@ class ParcelSizeWidget extends StatelessWidget {
                     children: [
                       Text(
                         size,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
                       const SizedBox(height: 3),
                       Text(
                         dimension,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
                       const SizedBox(height: 3),
                       Text(
                         description,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ],
                   )

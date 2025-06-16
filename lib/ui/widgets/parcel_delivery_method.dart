@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ParcelDeliveryMethod extends StatelessWidget {
-  final String deliveryMethod, duration, image;
-
-  final bool initiallyExpanded;
-
-  final Function(bool) onExpansionChanged;
-
   const ParcelDeliveryMethod({
-    Key? key,
+    super.key,
     required this.image,
     required this.duration,
     required this.deliveryMethod,
     required this.initiallyExpanded,
     required this.onExpansionChanged,
-  }) : super(key: key);
+  });
+
+  final String deliveryMethod, duration, image;
+  final bool initiallyExpanded;
+  final Function(bool) onExpansionChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        color: Theme.of(context).backgroundColor,
+        color: Theme.of(context).colorScheme.surface,
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).shadowColor,
@@ -45,7 +43,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
           transitionOnUserGestures: true,
           child: Container(
             height: 102,
-            color: Theme.of(context).backgroundColor,
+            color: Theme.of(context).colorScheme.surface,
             padding: const EdgeInsets.all(16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -66,11 +64,11 @@ class ParcelDeliveryMethod extends StatelessWidget {
                   children: [
                     Text(
                       deliveryMethod,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     ),
                     Text(
                       duration,
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
                 )
@@ -101,7 +99,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             'Recipient Info',
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(height: 16),
           Row(
@@ -109,7 +107,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 'Name',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),
@@ -122,7 +120,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 'Email',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),
@@ -135,7 +133,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 'Phone number',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),
@@ -148,7 +146,7 @@ class ParcelDeliveryMethod extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 'Address',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),

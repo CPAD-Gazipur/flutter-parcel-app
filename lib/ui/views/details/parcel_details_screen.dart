@@ -5,12 +5,9 @@ import 'package:flutter_parcel_app/ui/views/views.dart';
 import 'package:flutter_parcel_app/ui/widgets/widgets.dart';
 
 class ParcelDetailsScreen extends StatelessWidget {
-  final Parcel parcel;
+  const ParcelDetailsScreen({super.key, required this.parcel});
 
-  const ParcelDetailsScreen({
-    Key? key,
-    required this.parcel,
-  }) : super(key: key);
+  final Parcel parcel;
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +21,12 @@ class ParcelDetailsScreen extends StatelessWidget {
             children: [
               Text(
                 'Send parcel',
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               const SizedBox(height: 17),
               Text(
                 'Parcel size',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 11),
               ParcelSizeWidget(
@@ -42,7 +39,7 @@ class ParcelDetailsScreen extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 'Delivery method',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 11),
               ListView.builder(
@@ -81,7 +78,7 @@ class ParcelDetailsScreen extends StatelessWidget {
                   },
                   child: Text(
                     'Checkout',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
               ),

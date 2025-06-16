@@ -7,7 +7,7 @@ import 'package:flutter_parcel_app/utils/image_utils.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ParcelCenterScreen extends StatefulWidget {
-  const ParcelCenterScreen({Key? key}) : super(key: key);
+  const ParcelCenterScreen({super.key});
 
   @override
   State<ParcelCenterScreen> createState() => _ParcelCenterScreenState();
@@ -19,7 +19,7 @@ class _ParcelCenterScreenState extends State<ParcelCenterScreen> {
   Future<void> _onMapCreated(GoogleMapController controller) async {
     final googleOffices = await locations.getGoogleOffices();
 
-    BitmapDescriptor customIcon = await BitmapDescriptor.fromAssetImage(
+    BitmapDescriptor customIcon = await BitmapDescriptor.asset(
       const ImageConfiguration(
         size: Size(24, 24),
       ),
@@ -46,34 +46,34 @@ class _ParcelCenterScreenState extends State<ParcelCenterScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 24,
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Parcel center',
-                style: Theme.of(context).textTheme.headline1,
+      child: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Parcel center',
+              style: Theme.of(context).textTheme.displayLarge,
+            ),
+            const SizedBox(height: 29),
+            Container(
+              height: 221,
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
+                borderRadius: BorderRadius.circular(4),
+                boxShadow: [
+                  BoxShadow(
+                    color: Theme.of(context).shadowColor,
+                    blurRadius: 12,
+                    spreadRadius: 0,
+                    offset: const Offset(0, 0),
+                  )
+                ],
               ),
-              const SizedBox(height: 29),
-              Container(
-                height: 221,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).backgroundColor,
-                  borderRadius: BorderRadius.circular(4),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Theme.of(context).shadowColor,
-                      blurRadius: 12,
-                      spreadRadius: 0,
-                      offset: const Offset(0, 0),
-                    )
-                  ],
-                ),
                 child: GoogleMap(
                   onMapCreated: _onMapCreated,
                   initialCameraPosition: const CameraPosition(
@@ -90,37 +90,37 @@ class _ParcelCenterScreenState extends State<ParcelCenterScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 17),
-              const ParcelOfficeWidget(
-                officeCode: 'NY0924',
-                officeName: '985 Meadow St.',
-                officeAddress: 'Staten Island, NY 10306',
-                officeStats: 'Fully occupied',
-                officeStatsNumber: 0.7,
-              ),
-              const ParcelOfficeWidget(
-                officeCode: 'NY0812',
-                officeName: '54 West Adams Court',
-                officeAddress: 'Rego Park, NY 11374',
-                officeStats: 'Lots of empty space',
-                officeStatsNumber: 0.3,
-              ),
-              const ParcelOfficeWidget(
-                officeCode: 'NY0924',
-                officeName: '985 Meadow St.',
-                officeAddress: 'Staten Island, NY 10306',
-                officeStats: 'Fully occupied',
-                officeStatsNumber: 0.9,
-              ),
-              const ParcelOfficeWidget(
-                officeCode: 'NY0812',
-                officeName: '54 West Adams Court',
-                officeAddress: 'Rego Park, NY 11374',
-                officeStats: 'Lots of empty space',
-                officeStatsNumber: 0.5,
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(height: 17),
+            const ParcelOfficeWidget(
+              officeCode: 'NY0924',
+              officeName: '985 Meadow St.',
+              officeAddress: 'Staten Island, NY 10306',
+              officeStats: 'Fully occupied',
+              officeStatsNumber: 0.7,
+            ),
+            const ParcelOfficeWidget(
+              officeCode: 'NY0812',
+              officeName: '54 West Adams Court',
+              officeAddress: 'Rego Park, NY 11374',
+              officeStats: 'Lots of empty space',
+              officeStatsNumber: 0.3,
+            ),
+            const ParcelOfficeWidget(
+              officeCode: 'NY0924',
+              officeName: '985 Meadow St.',
+              officeAddress: 'Staten Island, NY 10306',
+              officeStats: 'Fully occupied',
+              officeStatsNumber: 0.9,
+            ),
+            const ParcelOfficeWidget(
+              officeCode: 'NY0812',
+              officeName: '54 West Adams Court',
+              officeAddress: 'Rego Park, NY 11374',
+              officeStats: 'Lots of empty space',
+              officeStatsNumber: 0.5,
+            ),
+          ],
         ),
       ),
     );

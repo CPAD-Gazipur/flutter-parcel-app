@@ -3,7 +3,7 @@ import 'package:flutter_parcel_app/utils/utils.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MyParcelWidget extends StatelessWidget {
-  const MyParcelWidget({Key? key}) : super(key: key);
+  const MyParcelWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MyParcelWidget extends StatelessWidget {
         height: 174,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
-          color: Theme.of(context).backgroundColor,
+          color: Theme.of(context).colorScheme.surface,
           boxShadow: [
             BoxShadow(
               color: Theme.of(context).shadowColor,
@@ -37,7 +37,7 @@ class MyParcelWidget extends StatelessWidget {
               children: [
                 Text(
                   '00359007738060313786',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 Container(
                   height: 31,
@@ -55,12 +55,12 @@ class MyParcelWidget extends StatelessWidget {
               children: [
                 Text(
                   'In transit',
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.displaySmall,
                 ),
                 const SizedBox(height: 3),
                 Text(
                   'Last update: 3 hours ago',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 12),
                 Container(
@@ -86,7 +86,7 @@ class MyParcelWidget extends StatelessWidget {
                     children: [
                       Text(
                         'Details',
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
                       SvgPicture.asset(ImageUtils.icDetailsSVG),
                     ],

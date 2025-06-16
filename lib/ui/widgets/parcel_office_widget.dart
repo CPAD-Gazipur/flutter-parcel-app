@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ParcelOfficeWidget extends StatelessWidget {
-  final String officeCode, officeName, officeAddress, officeStats;
-  final double officeStatsNumber;
   const ParcelOfficeWidget({
-    Key? key,
+    super.key,
     required this.officeCode,
     required this.officeName,
     required this.officeAddress,
     required this.officeStats,
     required this.officeStatsNumber,
-  }) : super(key: key);
+  });
+
+  final String officeCode, officeName, officeAddress, officeStats;
+  final double officeStatsNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class ParcelOfficeWidget extends StatelessWidget {
       height: 165,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        color: Theme.of(context).backgroundColor,
+        color: Theme.of(context).colorScheme.surface,
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).shadowColor,
@@ -42,11 +43,11 @@ class ParcelOfficeWidget extends StatelessWidget {
             children: [
               Text(
                 officeCode,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               Text(
                 'Available 24/7',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),
@@ -55,12 +56,12 @@ class ParcelOfficeWidget extends StatelessWidget {
             children: [
               Text(
                 officeName,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 3),
               Text(
                 officeAddress,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ],
           ),
@@ -69,7 +70,7 @@ class ParcelOfficeWidget extends StatelessWidget {
             children: [
               Text(
                 officeStats,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               const SizedBox(height: 3),
               Container(

@@ -5,7 +5,7 @@ import 'package:flutter_parcel_app/ui/views/details/parcel_details_screen.dart';
 import 'package:flutter_parcel_app/ui/widgets/parcel_size_widget.dart';
 
 class SendParcelScreen extends StatelessWidget {
-  const SendParcelScreen({Key? key}) : super(key: key);
+  const SendParcelScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +18,12 @@ class SendParcelScreen extends StatelessWidget {
           children: [
             Text(
               'Send parcel',
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
             const SizedBox(height: 17),
             Text(
               'Parcel Size',
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.displaySmall,
             ),
             const SizedBox(height: 11),
             ListView.builder(
