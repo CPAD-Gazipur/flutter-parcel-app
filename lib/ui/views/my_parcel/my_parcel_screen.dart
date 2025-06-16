@@ -81,6 +81,7 @@ class MyParcelScreen extends StatelessWidget {
                                     keyboardType: TextInputType.number,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
+                                      enabledBorder: InputBorder.none,
                                       hintText: 'Tracking number',
                                       focusedBorder: InputBorder.none,
                                     ),
